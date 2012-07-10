@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+	
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="lerolero1" class="destaque">
+			No mundo atual, a execução dos pontos do programa estende o 
+			alcance e a importância das direções preferenciais no sentido do 
+			progresso. Por outro lado, a complexidade dos estudos efetuados 
+			cumpre um papel essencial na formulação das diretrizes de 
+			desenvolvimento para o futuro. Caros amigos, a estrutura atual da 
+			organização garante a contribuição de um grupo importante na 
+			determinação do sistema de participação geral. 
+			<span>
+				<div>
+					No mundo atual, a execução dos pontos do programa estende o 
+					alcance e a importância das direções preferenciais no sentido do 
+					progresso. Por outro lado, a complexidade dos estudos efetuados 
+					cumpre um papel essencial na formulação das diretrizes de 
+					desenvolvimento para o futuro. Caros amigos, a estrutura atual da 
+					organização garante a contribuição de um grupo importante na 
+					determinação do sistema de participação geral. 
+				</div>
+			</span>
+		</div>
+		<div id="lerolero2">
+			No mundo atual, a execução dos pontos do programa estende o 
+			alcance e a importância das direções preferenciais no sentido do 
+			progresso. Por outro lado, a complexidade dos estudos efetuados 
+			cumpre um papel essencial na formulação das diretrizes de 
+			desenvolvimento para o futuro. Caros amigos, a estrutura atual da 
+			organização garante a contribuição de um grupo importante na 
+			determinação do sistema de participação geral. 
+		</div>
+		<div id="lerolero3" class="destaque">
+			No mundo atual, a execução dos pontos do programa estende o 
+			alcance e a importância das direções preferenciais no sentido do 
+			progresso. Por outro lado, a complexidade dos estudos efetuados 
+			cumpre um papel essencial na formulação das diretrizes de 
+			desenvolvimento para o futuro. Caros amigos, a estrutura atual da 
+			organização garante a contribuição de um grupo importante na 
+			determinação do sistema de participação geral. 
+		</div>
+		<div id="lerolero4">
+			No mundo atual, a execução dos pontos do programa estende o 
+			alcance e a importância das direções preferenciais no sentido do 
+			progresso. Por outro lado, a complexidade dos estudos efetuados 
+			cumpre um papel essencial na formulação das diretrizes de 
+			desenvolvimento para o futuro. Caros amigos, a estrutura atual da 
+			determinação do sistema de participação geral. 
+			organização garante a contribuição de um grupo importante na 
+			
+			<ul class="menu">
+				<li>Item 1</li>
+				<li>Item 2</li>
+				<li>Item 3</li>
+				<li>Item 4</li>
+				<li>Item 5</li>
+			</ul>
+		</div>
+		
+		<table id="form-itens">
+			<tr>
+				<td><input class="todos" type="checkbox" /></td>
+				<td>Marcar todos</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" /></td>
+				<td>Item 1</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" /></td>
+				<td>Item 2</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" /></td>
+				<td>Item 3</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" /></td>
+				<td>Item 4</td>
+			</tr>
+		</table>		
+		
+		<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+		<script type="text/javascript">
+			jQuery(function($){
+				
+				$('#lerolero2').css({'color' : 'green'});
+				$('.destaque').css({'font-weigth' : 'bold', 'color' : '#f0c'})
+				$('#lerolero1').css({'color' : 'red', 'background-color' : '#ccc'});
+				$('#lerolero1 > span > div').css({'border' : '#333 solid 2px', 'padding' : '10px'});
+// 				$('div#lerolero4 > ul.menu li:eq(1)').css('font-size', '26px');
+// 				$('.menu li:lt(2)').css('color', 'red');
+// 				$('.menu li:gt(1)').css('color', 'yellow');
+				
+				$('.menu li:odd').css('color', 'red');
+				$('.menu li:even').css('color', 'yellow');
+				
+				
+				// Eventos
+				$('.menu li').hover(
+					function(){
+						$(this).css('font-size', '26px')				
+					},
+					function(){
+						$(this).css('font-size', '12px')
+					}
+				)
+
+				$('.menu li').click(
+					function(){
+						alert('Você clicou no item #' + ($(this).index() + 1));				
+					}
+				)
+				$('#form-itens .todos').toggle(
+					function(){
+						$('#form-itens input:checkbox').attr('checked', 'checked');				
+					},
+					function(){
+						$('#form-itens input:checkbox').removeAttr('checked');				
+					},
+					function(){
+						if(confirm('Deseja Marcar todos novamente?') == true){
+							$('#form-itens .todos').click();
+						}
+					}
+				)
+			})
+		</script>
+	</body>
+</html>

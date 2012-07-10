@@ -1,0 +1,41 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<style type="text/css" media="screen">
+
+			.numeros {
+				position: relative;
+				width: 75px;
+				line-height: 75px;
+				text-align: center;
+				float: left;
+				border: #333 solid 1px;
+				margin: 5px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+			var i = 1;
+
+			while(i <= 100){
+				document.write('<div class="numeros">' + i +'</div>');
+				i++;
+			}
+			i -= 2;
+
+			for(i = i; i >= 1; i--){
+				document.write('<div class="numeros">' + i +'</div>');
+			}
+
+		</script>
+	</body>
+</html>

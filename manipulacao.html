@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			.vermelho{
+				font-weight: bold;
+				color: #f00;
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="lerolero1" class="destaque">
+			No mundo atual, a execução dos pontos do programa estende o 
+			alcance e a importância das direções preferenciais no sentido do 
+			progresso. Por outro lado, a complexidade dos estudos efetuados 
+			cumpre um papel essencial na formulação das diretrizes de 
+			desenvolvimento para o futuro. Caros amigos, a estrutura atual da 
+			organização garante a contribuição de um grupo importante na 
+			determinação do sistema de participação geral. 
+			<span>
+				<div>
+					No mundo atual, a execução dos pontos do programa estende o 
+					alcance e a importância das direções preferenciais no sentido do 
+					progresso. Por outro lado, a complexidade dos estudos efetuados 
+					cumpre um papel essencial na formulação das diretrizes de 
+					desenvolvimento para o futuro. Caros amigos, a estrutura atual da 
+					organização garante a contribuição de um grupo importante na 
+					determinação do sistema de participação geral. 
+				</div>
+			</span>
+		</div>
+		<div id="lerolero2">
+			No mundo atual, a execução dos pontos do programa estende o 
+			alcance e a importância das direções preferenciais no sentido do 
+			progresso. Por outro lado, a complexidade dos estudos efetuados 
+			cumpre um papel essencial na formulação das diretrizes de 
+			desenvolvimento para o futuro. Caros amigos, a estrutura atual da 
+			organização garante a contribuição de um grupo importante na 
+			determinação do sistema de participação geral. 
+		</div>
+		<div id="lerolero3" class="destaque">
+			No mundo atual, a execução dos pontos do programa estende o 
+			alcance e a importância das direções preferenciais no sentido do 
+			progresso. Por outro lado, a complexidade dos estudos efetuados 
+			cumpre um papel essencial na formulação das diretrizes de 
+			desenvolvimento para o futuro. Caros amigos, a estrutura atual da 
+			organização garante a contribuição de um grupo importante na 
+			determinação do sistema de participação geral. 
+		</div>
+		<div id="lerolero4">
+			No mundo atual, a execução dos pontos do programa estende o 
+			alcance e a importância das direções preferenciais no sentido do 
+			progresso. Por outro lado, a complexidade dos estudos efetuados 
+			cumpre um papel essencial na formulação das diretrizes de 
+			desenvolvimento para o futuro. Caros amigos, a estrutura atual da 
+			determinação do sistema de participação geral. 
+			organização garante a contribuição de um grupo importante na 
+			
+			<ul class="menu">
+				<li>Item 1</li>
+				<li>Item 2</li>
+				<li>Item 3</li>
+				<li>Item 4</li>
+				<li>Item 5</li>
+			</ul>
+		</div>
+		
+		<table id="form-itens">
+			<tr>
+				<td><input class="todos" type="checkbox" /></td>
+				<td>Marcar todos</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" /></td>
+				<td>Item 1</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" /></td>
+				<td>Item 2</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" /></td>
+				<td>Item 3</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" /></td>
+				<td>Item 4</td>
+			</tr>
+		</table>		
+		
+		<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+		<script type="text/javascript">
+			jQuery(function($){
+				console.log($('table').width() + ' x ' + $('table').height());
+				
+				var position = $('table').position();
+				console.log(position);
+				$('*').toggle(
+					function(){
+						$(this).addClass('vermelho');				
+					},
+					function(){
+						$(this).removeClass('vermelho');				
+					}
+				)
+			})
+		</script>
+	</body>
+</html>

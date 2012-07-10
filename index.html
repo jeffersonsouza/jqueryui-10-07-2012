@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+	<body>
+		<div id="box" style="position: absolute; top: 100px; left: 100px; border: #333 solid 1px; padding: 10px;"></div>
+		<script type="text/javascript">
+//			document.write('O meu texto no documento');
+//			nome = 'Jefferson\'s Souza';
+//			document.getElementById('box').innerHTML = '<strong>' + nome + '</strong>';
+
+//			var idade = 25;
+//			idade = idade % 3;
+//			document.write('Sua idade é: ' + idade);
+
+			var dia = 'Monday';
+			var nome = 'Jefferson';
+
+			if((dia == 'Segunda' && nome == 'Jefferson') || (dia == 'Sexta' && nome == 'Jefferson')){
+				document.getElementById('box').innerHTML = 'Faculdade';
+			} else if(dia == 'Terça'){
+				document.getElementById('box').innerHTML = 'Curso de Javascript';
+			} else if(dia == 'Quarta'){
+				document.getElementById('box').innerHTML = 'Curso de Inglês';
+			} else if(dia == 'Quinta'){
+				document.getElementById('box').innerHTML = 'Faculdade + Curso de Javascript';
+			} else if(dia == 'Sábado'){
+				document.getElementById('box').innerHTML = 'Palestras na Íparos';
+			} else if(dia == 'Domingo'){
+				document.getElementById('box').innerHTML = 'Descansar';
+			} else {
+				document.getElementById('box').innerHTML = 'Informe um dia válido';
+			}
+
+		</script>
+	</body>
+</html>

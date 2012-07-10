@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="bootstrap/css/bootstrap-responsible.min.css" />
+		<style type="text/css">
+			.controle {
+				position: fixed;
+				bottom: 5px; 
+				right: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="aula">
+			<div class="span5 well">
+				O empenho em analisar a execução dos pontos do programa desafia a capacidade de equalização das condições financeiras e administrativas exigidas. Por outro lado, a complexidade dos estudos efetuados prepara-nos para enfrentar situações atípicas decorrentes do processo de comunicação como um todo. O cuidado em identificar pontos críticos na constante divulgação das informações exige a precisão e a definição do sistema de formação de quadros que corresponde às necessidades. 
+	
+	          Neste sentido, a crescente influência da mídia ainda não demonstrou convincentemente que vai participar na mudança dos paradigmas corporativos. Do mesmo modo, a competitividade nas transações comerciais apresenta tendências no sentido de aprovar a manutenção das novas proposições. Percebemos, cada vez mais, que o novo modelo estrutural aqui preconizado é uma das consequências do fluxo de informações. Nunca é demais lembrar o peso e o significado destes problemas, uma vez que a necessidade de renovação processual garante a contribuição de um grupo importante na determinação dos modos de operação convencionais. Desta maneira, o início da atividade geral de formação de atitudes obstaculiza a apreciação da importância das condições inegavelmente apropriadas. 
+			</div>
+			<div class="span3 well">
+				O empenho em analisar a execução dos pontos do programa desafia a capacidade de equalização das condições financeiras e administrativas exigidas. Por outro lado, a complexidade dos estudos efetuados prepara-nos para enfrentar situações atípicas decorrentes do processo de comunicação como um todo. O cuidado em identificar pontos críticos na constante divulgação das informações exige a precisão e a definição do sistema de formação de quadros que corresponde às necessidades. 
+	
+			</div>
+			<div class="span3 well">
+				O empenho em analisar a execução dos pontos do programa desafia a capacidade de equalização das condições financeiras e administrativas exigidas. Por outro lado, a complexidade dos estudos efetuados prepara-nos para enfrentar situações atípicas decorrentes do processo de comunicação como um todo. O cuidado em identificar pontos críticos na constante divulgação das informações exige a precisão e a definição do sistema de formação de quadros que corresponde às necessidades. 
+	
+			</div>
+			<div class="span3 well">
+				O empenho em analisar a execução dos pontos do programa desafia a capacidade de equalização das condições financeiras e administrativas exigidas. Por outro lado, a complexidade dos estudos efetuados prepara-nos para enfrentar situações atípicas decorrentes do processo de comunicação como um todo. O cuidado em identificar pontos críticos na constante divulgação das informações exige a precisão e a definição do sistema de formação de quadros que corresponde às necessidades. 
+	
+			</div>
+			<div class="span13 well"></div>
+		</div>			
+		
+		<div class="span3 well controle">
+			<a href="javascript:void(0);" id="copiar-html">copiar HTML</a>
+		</div>
+		
+		<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			jQuery(function($){
+				$('#copiar-html').toggle(
+					function(){
+						$(this).html('limpar HTML');
+						$('#aula div:eq(4)').html($('#aula div:eq(0)').html());
+					},
+					function(){
+						$(this).html('copiar HTML');
+						$('#aula div:eq(4)').empty();
+					}
+				)
+				
+			})
+		</script>
+	</body>
+</html>
