@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" />
+		<style type="text/css">
+			.modal-endereco { 
+ 				visibility: hidden;
+				top: 115px; 
+				left: 500px; 
+				width: 300px;
+				min-height: 100px;
+				position: absolute;
+				background: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="">
+			<table class="table">
+				<tr>
+					<td><label for="nome">Nome:</label></td>
+					<td><input type="text" class="span3" placeholder="digite o seu nome" id="nome" /></td>
+				</tr>
+				<tr>
+					<td><label for="email">Email:</label></td>
+					<td><input type="text" class="span3" placeholder="digite o seu email" id="email" /></td>
+				</tr>
+				<tr>
+					<td><label for="cep">Cep:</label></td>
+					<td><input type="text" class="span3" placeholder="digite o seu cep" onblur="buscaEndereco( this.value );" id="cep" /></td>
+				</tr>
+				<tr class="form-actions">
+					<td colspan="2">
+						<input type="button" value="enviar" class="btn btn-info" />
+					</td>
+				</tr>
+			</table>
+		</form>
+		<div class="modal-endereco thumbnail" id="retorno-endereco">
+			
+		</div>
+		<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+		function $( id ){
+			return document.getElementById( id );
+		}
+		
+		function fazAjax(){
+	      try{return new ActiveXObject("Msxml2.XMLHTTP");} catch(e){ }
+	      try{return new ActiveXObject("Microsoft.XMLHTTP");} catch(e){ }
+	      try{return new XMLHttpRequest(); } catch(e){ }
+	      alert("Navegador muito antigo");
+	      return null;
+		}
+		
+		function buscaEndereco( cep ){
+			ajax = fazAjax();
+			url = "retorna-endereco.php?cep=" + cep;
+			ajax.open("get", url, true);
+			ajax.onreadystatechange = function() {
+				if(ajax.readyState == 4){
+					$('retorno-endereco').innerHTML = ajax.responseText; 
+					$('retorno-endereco').style.visibility = "visible"; 
+				}
+			};
+			ajax.send(null);
+		}
+		</script>
+	</body>
+</html>
