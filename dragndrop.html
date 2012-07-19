@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" />
+		<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.21.custom.css" />
+		<style type="text/css">
+			#lista-caixas{ list-style: none; }
+			#lista-caixas li{ position: relative; }
+			.deletar-caixa{ position: absolute; top: 0; right: 0;}
+		</style>
+	</head>
+	<body>
+		<header class="hero-unit">
+			<div class="container">
+				<h1>Let's Play</h1>
+				<p>A Default CakeApp with power of Twitter Bootstrap</p>
+				<p class="pull-right">
+				</p>
+			</div>
+		</header>
+		<section>
+			<div class="container">
+				<div class="span8 well pull-left">
+					<ul id="lista-caixas"></ul>
+				</div>
+				<div class="span2 well pull-right">
+					<h4>Criar novas caixas</h4>
+					<br />
+					<a href="javascript:void(0);" class="btn btn-success" id="criar-caixa"><i class="icon-plus-sign icon-white"></i> Criar Caixa</a>
+				</div>
+			</div>
+		</section>
+		<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
+		<script type="text/javascript">
+			jQuery(function($) {
+				$('#criar-caixa').live('click',function(){
+					nome = prompt('Nome da caixa:');
+					$('#lista-caixas').append('<li class="span2 well"><a href="javascript:void(0);" class="deletar-caixa"><i class="icon-remove-sign"></i></a>' + nome + '</li>');
+				});
+				
+				$('.deletar-caixa').live('click', function(){
+					caixa = $(this).parent();
+					caixa.fadeOut('slow', function(){
+						caixa.remove();
+					})
+				});
+			})
+		</script>
+	</body>
+</html>
