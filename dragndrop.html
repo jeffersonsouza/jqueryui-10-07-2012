@@ -18,6 +18,12 @@
 				<h1>Let's Play</h1>
 				<p>A Default CakeApp with power of Twitter Bootstrap</p>
 				<p class="pull-right">
+					<div id="slider" class="span4"></div> 
+					<div class="span3 botoes">
+<!-- 						<a href="#" class="button">Ativar</a> -->
+						<input type="radio" name="status" value="1" id="ativar" /><label for="ativar">ativar</label>
+						<input type="radio" name="status" value="0" id="desativar" /><label for="desativar">desativar</label>
+					</div>
 				</p>
 			</div>
 		</header>
@@ -30,6 +36,9 @@
 					<h4>Criar novas caixas</h4>
 					<br />
 					<a href="javascript:void(0);" class="btn btn-success" id="criar-caixa"><i class="icon-plus-sign icon-white"></i> Criar Caixa</a>
+					<br /><br />
+					<a href="javascript:void(0);" class="btn btn-info" id="refresh"><i class="icon-th-large icon-white"></i> resetar</a>
+					
 				</div>
 			</div>
 		</section>
@@ -41,14 +50,53 @@
 				$('#criar-caixa').live('click',function(){
 					nome = prompt('Nome da caixa:');
 					$('#lista-caixas').append('<li class="span2 well"><a href="javascript:void(0);" class="deletar-caixa"><i class="icon-remove-sign"></i></a>' + nome + '</li>');
+					
+					// Drag'n Drop
+// 					$('#lista-caixas li').draggable({
+// 						axis : 'y',
+// 						'cursor' : 'help',
+// 						opacity : 0.40,
+// 						stack : 'li'
+// 					});
+					
+					$('#lista-caixas').sortable({
+						placeholder: 'span2 well',
+						scroll: false
+					});
+					
+					// Slider
+					
+					$('#slider').slider({
+						step: 10,
+						range: 'min',
+						min: $('#lista-caixas li:last').width(),
+						max: 500,
+						value: $('#lista-caixas li:last').width(),
+						slide: function( event, ui ) {
+							console.log(ui);
+							$('#lista-caixas li').css('width', ui.value + 'px');
+						}
+					});
 				});
 				
 				$('.deletar-caixa').live('click', function(){
-					caixa = $(this).parent();
-					caixa.fadeOut('slow', function(){
-						caixa.remove();
-					})
+					if(confirm('Deseja realmente DELETAR a caixa') == true){
+						caixa = $(this).parent();
+						caixa.fadeOut('slow', function(){
+							caixa.remove();
+						})
+					}
 				});
+				
+				$('#refresh').live('click', function(){
+					$('#lista-caixas').sortable('refreshPositions');
+				})
+				
+				// Button
+				
+				$('.button').button();
+				$('.botoes').buttonset();
+				
 			})
 		</script>
 	</body>
